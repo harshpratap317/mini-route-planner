@@ -200,6 +200,16 @@ MONGODB_URI=mongodb://127.0.0.1:27017/mini-route-planner
 
 ## Deployment Prep
 
+For Vercel, this repo includes `vercel.json` so Vercel builds the React app from `frontend/` and publishes `frontend/dist`.
+
+Set this frontend environment variable in Vercel:
+
+```bash
+VITE_API_BASE_URL=https://your-backend-domain.example
+```
+
+Important: Vercel will deploy the frontend. The current Express backend should be deployed separately on a Node host such as Render, Railway, Fly.io, or a VPS.
+
 For deployment, build the frontend and run the backend separately:
 
 ```bash
